@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Spline Scene</title>
+  <!-- Add the Spline script -->
+  <script type="module" src="https://unpkg.com/@splinetool/react-spline@latest/dist/spline-react.min.js"></script>
+  <!-- Add React and ReactDOM scripts -->
+  <script src="https://unpkg.com/react@17/umd/react.production.min.js" crossorigin></script>
+  <script src="https://unpkg.com/react-dom@17/umd/react-dom.production.min.js" crossorigin></script>
+</head>
+<body style="background-color: black;">
+      <div id="root"></div>
+      <script type="text/babel">
+        const { Spline } = window['splinetool-react-spline'];
+    
+        function App() {
+          return (
+            <Spline scene="https://prod.spline.design/dIe7Q6gf0f6S51c8/scene.splinecode" />
+          );
+        }
+    
+        ReactDOM.render(
+          <App />,
+          document.getElementById('root')
+        );
+      </script>
+    </body>
+    </html>
+    
