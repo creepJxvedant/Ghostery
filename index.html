@@ -11,9 +11,15 @@
 
 <style>
 
-.local_second_searchbar{
-  display: none;
+
+
+@media (min-width:750px){
+
+.header{
+    justify-content:end;
 }
+}
+
 
     @media (max-width:680px){
         .header .second{
@@ -25,14 +31,13 @@
         
     }
 
-@media(max-width:450px){
-.local_second_searchbar{
-        display: block;
-    }
-    
+@media(max-width:550px){
     .header .local_first_search_div{
         display: none;
     }
+    .header .second:nth-child(1){
+      display:block;
+  }
    
 }
 
@@ -46,21 +51,12 @@
 }
 
 
-@media (min-width:750px){
-
-    .header{
-        justify-content:end;
-    }
-}
-
-
-
 </style>
 
 
 <body>
 <div class="wrapper">
-    <div class="header navbar sticky-top p-1 d-flex" style="height:80px;">
+    <div class="header navbar sticky-top p-1 d-flex" style="height:8vh;">
         <ul class="nav first"> 
             <li class="nav-item">
                 <svg width="50px" version="1.1" id="_x32_" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" viewBox="0 0 512 512" xml:space="preserve">
@@ -80,7 +76,11 @@
             </li>
         </ul>
 
-        <ul class="nav justify-content-end third">
+        <ul class="nav justify-content-end third d-flex align-items-center gap-3">
+  
+      <li class="nav-item">
+        <svg viewBox="0 0 24 24" width="30px" height="30px" fill="none" xmlns="http://www.w3.org/2000/svg"><g id="SVGRepo_bgCarrier" stroke-width="0"></g><g id="SVGRepo_tracerCarrier" stroke-linecap="round" stroke-linejoin="round"></g><g id="SVGRepo_iconCarrier"> <path d="M14.9536 14.9458L21 21M17 10C17 13.866 13.866 17 10 17C6.13401 17 3 13.866 3 10C3 6.13401 6.13401 3 10 3C13.866 3 17 6.13401 17 10Z" stroke="blue" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"></path> </g></svg>
+      </li>
             <li class="nav-item">
              
         <button type="button" title="menuButton" class="menuButton" data-bs-toggle="offcanvas" data-bs-target="#offcanvasExample" aria-controls="offcanvasExample">
@@ -96,7 +96,6 @@
 
 
     <ul class="nav justify-content-end second">
-
         <li class="nav-item">
             <a class="nav-link active" aria-current="page" href="#">
                 <svg xmlns="http://www.w3.org/2000/svg" width="25" height="25" class="bi bi-house" viewBox="0 0 16 16">
@@ -189,14 +188,6 @@
 
 </div>
 
-
-
-    <div class="container-fluid local_second_searchbar" style="margin-top:10px;">
-                <input type="text" class="local_header_textbox" placeholder="Search Something...">
-                <button id="searchbtn" class="btn" type="button">Search</button>
-                </div>
-
-
       <div class="local-slider-container" style="background-image:url(https://media.rawg.io/media/games/e1f/e1ffbeb1bac25b19749ad285ca29e158.jpg);">
         <div class="mainslidercontainer" style="width:100vw;height:60vh;backdrop-filter:blur(10px);display:grid;place-items:center;">
         <div class="swiper-container" style="position: relative;z-index:2;width:60vw;height:60vh; overflow-x: hidden;">
@@ -217,11 +208,6 @@
       <div class="local-list-container">
     
         <div class="sidebar">
-        <div class="genre-toggler">
-          <span id="a"></span>
-          <span id="b"></span>
-          <span id="c"></span>
-        </div>
         <div class="local-sidebar">
           <ul>Generes
             <li index="0">Action</li>
@@ -239,22 +225,8 @@
       </div>
 
         <div class="games-container">
-          <div class="game"></div>
-          <div class="game"></div>
-          <div class="game"></div>
-          <div class="game"></div>
-          <div class="game"></div>
-          <div class="game"></div>
-          <div class="game"></div>
-          <div class="game"></div>
-          <div class="game"></div>
-          <div class="game"></div>
-          <div class="game"></div>
-          <div class="game"></div>
-          <div class="game"></div>
-          <div class="game"></div>
-          <div class="game"></div>
-          <div class="game"></div>
+
+          
 
 </div>
        
