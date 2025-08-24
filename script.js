@@ -1,6 +1,6 @@
-// document.addEventListener('contextmenu', function(event) {
-//   event.preventDefault();
-// });
+// // document.addEventListener('contextmenu', function(event) {
+// //   event.preventDefault();
+// // });
 
 
 
@@ -12,63 +12,63 @@
 
 
 
-  // const img1=https://media.rawg.io/media/games/e1f/e1ffbeb1bac25b19749ad285ca29e158.jpg;
-  // const img2=https://media.rawg.io/media/games/b29/b294fdd866dcdb643e7bab370a552855.jpg;
-  // const img3=https://media.rawg.io/media/games/cd3/cd3c9c7d3e95cb1608fd6250f1b90b7a.jpg;
+//   // const img1=https://media.rawg.io/media/games/e1f/e1ffbeb1bac25b19749ad285ca29e158.jpg;
+//   // const img2=https://media.rawg.io/media/games/b29/b294fdd866dcdb643e7bab370a552855.jpg;
+//   // const img3=https://media.rawg.io/media/games/cd3/cd3c9c7d3e95cb1608fd6250f1b90b7a.jpg;
   
-  // const img4=https://media.rawg.io/media/games/e1f/e1ffbeb1bac25b19749ad285ca29e158.jpg;
-  // const img5=https://media.rawg.io/media/games/b29/b294fdd866dcdb643e7bab370a552855.jpg;
-  // const img6=https://media.rawg.io/media/games/cd3/cd3c9c7d3e95cb1608fd6250f1b90b7a.jpg;
+//   // const img4=https://media.rawg.io/media/games/e1f/e1ffbeb1bac25b19749ad285ca29e158.jpg;
+//   // const img5=https://media.rawg.io/media/games/b29/b294fdd866dcdb643e7bab370a552855.jpg;
+//   // const img6=https://media.rawg.io/media/games/cd3/cd3c9c7d3e95cb1608fd6250f1b90b7a.jpg;
 
 
-  //   fetch(todaysURL)
-  //   .then(response => {
-  //     if (!response.ok) {
-  //       throw new Error(`HTTP error! Status: ${response.status}`);
-  //     }
-  //     return response.json();
-  //   })
-  //   .then(data =>addDataSwiper(data))
-  //   .catch(error => {
-  //     console.error('Error fetching data:', error);
-  //   });
+//   //   fetch(todaysURL)
+//   //   .then(response => {
+//   //     if (!response.ok) {
+//   //       throw new Error(`HTTP error! Status: ${response.status}`);
+//   //     }
+//   //     return response.json();
+//   //   })
+//   //   .then(data =>addDataSwiper(data))
+//   //   .catch(error => {
+//   //     console.error('Error fetching data:', error);
+//   //   });
 
-  // const swiperslides=document.querySelector(".local-slider-container .swiper-container .swiper-wrapper");
+//   // const swiperslides=document.querySelector(".local-slider-container .swiper-container .swiper-wrapper");
 
-  //  function addDataSwiper(data){  
-  //    data.results.forEach(slide => {
-  //     const div=document.createElement('div');
-  //     div.classList.add("swiper-slide");
-  //     console.log(slide.background_image);
-  //    div.style.backgroundImage = `url(${slide.background_image})`;
-  //    div.style.backgroundPosition = "center";
-  //    div.style.backgroundSize= "cover";
-  //    swiperslides.appendChild(div);
-  //   })
-  // }
-  var swiper = new Swiper('.swiper-container', {
-    loop: true,
-    autoplay: {
-      delay: 5000,
-    },
-    navigation: {
-      nextEl: '.swiper-button-next',
-      prevEl: '.swiper-button-prev',
-    },
-    pagination: {
-      el: ".swiper-pagination",
-      dynamicBullets: true,
-    },
-  });
-
-
-
+//   //  function addDataSwiper(data){  
+//   //    data.results.forEach(slide => {
+//   //     const div=document.createElement('div');
+//   //     div.classList.add("swiper-slide");
+//   //     console.log(slide.background_image);
+//   //    div.style.backgroundImage = `url(${slide.background_image})`;
+//   //    div.style.backgroundPosition = "center";
+//   //    div.style.backgroundSize= "cover";
+//   //    swiperslides.appendChild(div);
+//   //   })
+//   // }
+//   var swiper = new Swiper('.swiper-container', {
+//     loop: true,
+//     autoplay: {
+//       delay: 5000,
+//     },
+//     navigation: {
+//       nextEl: '.swiper-button-next',
+//       prevEl: '.swiper-button-prev',
+//     },
+//     pagination: {
+//       el: ".swiper-pagination",
+//       dynamicBullets: true,
+//     },
+//   });
 
 
 
 
 
-  // Fetch data from RAWG API
+
+
+
+ // Fetch data from RAWG API
   fetch(url)
     .then(response => {
       if (!response.ok) {
@@ -81,7 +81,7 @@
       console.error('Error fetching data:', error);
     });
   
-  const wrapper = document.querySelector(".local-list-row");
+  const wrapper = document.querySelector(".local-list-container .games-container");
   
   function showData(data) {
     data.results.forEach(game => {
@@ -104,7 +104,7 @@
             gameinfo.appendChild(span2);
             gameinfo.appendChild(span3);
 
-            gameCard.className = "local-list-card";
+            gameCard.className = "game";
             gameinfo.className="gameinfo";
             gameCard.appendChild(gameinfo);
 
@@ -131,8 +131,6 @@
 
   const btn=document.querySelector(".genre-toggler");
   const genresidebar=document.querySelector(".local-sidebar");
-  btn.classList.add("active");
-  genresidebar.classList.add("active");
 
 
   btn.addEventListener("click", () => {
